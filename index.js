@@ -28,7 +28,7 @@ app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
   var prompt = "Hi there! Why don't you tell the parrot your name? He'll be listening for the next 8 seconds or so.";
-  response.say(prompt).reprompt(prompt).shouldEndSession(true);
+  response.say(prompt).reprompt(prompt).shouldEndSession(false);
 });
 
 alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
