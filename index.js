@@ -40,8 +40,7 @@ alexaApp.intent("nameIntent", {
     ]
   },
   function(request, response) {
-    var appel = request.slot("NAME");
-    response.say("The parrot replies, Squawk? The parrot is very confused, as it does not understand human language. Sorry,".appel);
+    response.say("The parrot replies, Squawk? The parrot is very confused, as it does not understand human language. Sorry," + request.slot("NAME"));
   }
 );
 
