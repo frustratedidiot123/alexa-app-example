@@ -27,7 +27,8 @@ alexaApp.express({
 app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
-  response.say("Hi there! You've launched this very rudimentary app! Why don't you tell the parrot your name?");
+  var prompt = "Hi there! Why don't you tell the parrot your name?";
+  response.say(prompt).reprompt(prompt).shouldEndSession(true);
 });
 
 alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
