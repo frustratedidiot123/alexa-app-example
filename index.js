@@ -27,7 +27,7 @@ alexaApp.express({
 app.set("view engine", "ejs");
 
 alexaApp.launch(function(request, response) {
-  response.say("Hi there! You've launched this very rudimentary app! Why don't you tell me your name?");
+  response.say("Hi there! You've launched this very rudimentary app! Why don't you tell the parrot your name?");
 });
 
 alexaApp.dictionary = { "names": ["matt", "joe", "bob", "bill", "mary", "jane", "dawn"] };
@@ -39,7 +39,7 @@ alexaApp.intent("nameIntent", {
     ]
   },
   function(request, response) {
-    response.say("Okay! Good to know!");
+    response.say("The parrot replies, Squawk? The parrot is very confused, as it does not understand human language. Sorry, {NAME}.");
   }
 );
 
