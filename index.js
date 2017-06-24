@@ -44,4 +44,15 @@ alexaApp.intent("nameIntent", {
   }
 );
 
+alexaApp.intent("AMAZON.HelpIntent", {
+  "slots": {} },
+//"utterances": [ 
+ //              "help", "help me"
+  //              ]
+//  },
+  function(request, response) {
+    response.say("Don't worry, It's all rather simple, to talk to the parrot, just say, my name is, and your name. To exit, at any time, just say stop.").shouldEndSession(false);
+  }
+ );
+
 app.listen(PORT, () => console.log("Listening on port " + PORT + "."));
