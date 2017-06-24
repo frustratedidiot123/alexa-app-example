@@ -40,7 +40,9 @@ alexaApp.intent("nameIntent", {
     ]
   },
   function(request, response) {
-    response.say("The parrot replies, Squawk? The parrot is very confused, as it does not understand human language. Sorry," + request.slot("NAME"));
+  var namen = request.slot("NAME");
+  if (namen === undefined) { namen = "there"} ;
+    response.say("The parrot replies, Squawk? The parrot is very confused, as it does not understand human language. Sorry," + namen );
   }
 );
 
@@ -51,7 +53,7 @@ alexaApp.intent("AMAZON.HelpIntent", {
   //              ]
 //  },
   function(request, response) {
-    response.say("Don't worry, It's all rather simple. To talk to the parrot, just say, my name is, and your name. To exit, at any time, just say stop, or cancel.").shouldEndSession(false);
+    response.say("To talk to the parrot, just say, my name is, and your name. To exit, at any time, just say stop, or cancel.").shouldEndSession(false);
   }
  );
 
