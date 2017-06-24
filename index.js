@@ -66,4 +66,15 @@ alexaApp.intent("AMAZON.StopIntent", {
   }
  );
 
+alexaApp.intent("AMAZON.CancelIntent", {
+  "slots": {} },
+//"utterances": [ 
+ //              "help", "help me"
+  //              ]
+//  },
+  function(request, response) {
+    response.say("Cancelling. Goodbye!").shouldEndSession(true);
+  }
+ );
+
 app.listen(PORT, () => console.log("Listening on port " + PORT + "."));
