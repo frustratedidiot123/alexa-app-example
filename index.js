@@ -51,7 +51,18 @@ alexaApp.intent("AMAZON.HelpIntent", {
   //              ]
 //  },
   function(request, response) {
-    response.say("Don't worry, It's all rather simple, to talk to the parrot, just say, my name is, and your name. To exit, at any time, just say stop.").shouldEndSession(false);
+    response.say("Don't worry, It's all rather simple. To talk to the parrot, just say, my name is, and your name. To exit, at any time, just say stop, or cancel.").shouldEndSession(false);
+  }
+ );
+
+alexaApp.intent("AMAZON.StopIntent", {
+  "slots": {} },
+//"utterances": [ 
+ //              "help", "help me"
+  //              ]
+//  },
+  function(request, response) {
+    response.say("Sorry to see you go. Goodbye!").shouldEndSession(true);
   }
  );
 
