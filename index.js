@@ -41,7 +41,7 @@ alexaApp.intent("nameIntent", {
   },
   function(request, response) {
   var namen = request.slot("NAME");
-  if (namen === undefined) { namen = "there"} ;
+  if (namen === undefined) { namen = "about that."} ;
     response.say("The parrot replies, Squawk? The parrot is very confused, as it does not understand human language. Sorry," + namen );
   }
 );
